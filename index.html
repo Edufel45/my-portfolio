@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- SEO Meta Tags -->
-    <title>Felix Kipngetich | Software Engineer | FinTech & Android Developer</title>
-    <meta name="description" content="Felix Kipngetich - Software Engineer specializing in Android Development, FinTech, Banking Systems, and Payment Gateways. Expert in Kotlin, Go, Java, and Enterprise Solutions.">
-    <meta name="keywords" content="Felix Kipngetich, Software Engineer, Android Developer, FinTech, Kotlin, Go, Java, Payment Systems, Banking, Nairobi, Kenya">
+    <title>Felix Kipngetich | Senior Software Engineer | FinTech & Android Expert</title>
+    <meta name="description" content="Felix Kipngetich - Senior Software Engineer specializing in Android Development, FinTech, Banking Systems, and Payment Gateways. 4+ years experience, 15+ successful projects.">
+    <meta name="keywords" content="Felix Kipngetich, Software Engineer, Android Developer, FinTech, Kotlin, Go, Java, Python, Payment Systems, Banking, Blockchain, AI, Nairobi, Kenya">
     <meta name="author" content="Felix Kipngetich">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Felix Kipngetich | Software Engineer">
-    <meta property="og:description" content="Android Development | FinTech | Banking Systems | Payment Gateways">
+    <meta property="og:title" content="Felix Kipngetich | Senior Software Engineer">
+    <meta property="og:description" content="Android Development | FinTech | Banking Systems | Payment Gateways | AI/ML">
     <meta property="og:type" content="portfolio">
     <meta property="og:url" content="https://Edufel45.github.io/my-portfolio">
+    <meta property="og:image" content="profile-photo.png">
     
     <!-- Preconnect for faster loading -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -23,6 +24,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         * {
@@ -33,13 +37,14 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
             color: #1a1a2e;
             line-height: 1.6;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
-        /* Theme Colors - Green/Teal (FinTech vibe) */
+        /* Theme Colors */
         :root {
             --primary: #059669;
             --primary-dark: #047857;
@@ -48,8 +53,10 @@
             --accent: #14b8a6;
             --gray-light: #f3f4f6;
             --gray: #6b7280;
+            --dark: #1e293b;
         }
 
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -59,6 +66,80 @@
         ::-webkit-scrollbar-thumb {
             background: var(--primary);
             border-radius: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-fadeUp {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .animate-slideLeft {
+            animation: slideInLeft 0.8s ease forwards;
+        }
+        .animate-slideRight {
+            animation: slideInRight 0.8s ease forwards;
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Typing effect */
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--primary);
+            animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
         }
 
         /* Navigation */
@@ -71,6 +152,7 @@
             z-index: 1000;
             padding: 1rem 0;
             box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
         }
         .nav-container {
             max-width: 1280px;
@@ -97,7 +179,22 @@
             color: var(--secondary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
         }
         .nav-links a:hover {
             color: var(--primary);
@@ -107,9 +204,6 @@
             font-size: 1.8rem;
             cursor: pointer;
             color: var(--primary);
-        }
-        .close-menu {
-            display: none;
         }
 
         .container {
@@ -125,28 +219,48 @@
             align-items: center;
             padding-top: 80px;
             background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23059669" fill-opacity="0.05" d="M0 0h200v200H0z"/><circle cx="100" cy="100" r="80" fill="none" stroke="%23059669" stroke-width="2"/></svg>') repeat;
+            opacity: 0.3;
+            pointer-events: none;
         }
         .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
         .hero-text h1 {
             font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 0.5rem;
-            color: var(--secondary);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         .hero-text .title {
             font-size: 1.3rem;
             color: var(--primary);
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
-        .hero-text .subtitle {
+        .hero-text .dynamic-title {
+            font-size: 1.1rem;
             color: var(--gray);
             margin-bottom: 1.5rem;
+            min-height: 3rem;
         }
         .profile-photo-container {
             text-align: center;
@@ -158,21 +272,9 @@
             object-fit: cover;
             border: 4px solid var(--primary);
             box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
-        }
-        .placeholder-photo {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: white;
-            cursor: pointer;
             transition: transform 0.3s;
         }
-        .placeholder-photo:hover {
+        .profile-photo:hover {
             transform: scale(1.02);
         }
         .stats {
@@ -183,9 +285,13 @@
         }
         .stat {
             text-align: center;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: var(--primary);
         }
@@ -208,10 +314,12 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
+            background-size: 200% auto;
         }
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
+            background-position: right center;
         }
         .btn-outline {
             border: 2px solid var(--primary);
@@ -221,18 +329,16 @@
         .btn-outline:hover {
             background: var(--primary);
             color: white;
+            transform: translateY(-3px);
         }
         .btn-download {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
         }
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-        }
 
         section {
             padding: 5rem 0;
+            position: relative;
         }
         .section-title {
             font-size: 2.5rem;
@@ -240,21 +346,22 @@
             margin-bottom: 2rem;
             text-align: center;
             color: var(--secondary);
+            position: relative;
         }
         .section-title:after {
             content: '';
             display: block;
             width: 60px;
             height: 4px;
-            background: var(--primary);
+            background: linear-gradient(90deg, var(--primary), var(--accent));
             margin: 0.5rem auto;
             border-radius: 2px;
         }
 
-        /* Skills */
+        /* Skills Grid with icons */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
         .skill-card {
@@ -286,9 +393,15 @@
             border-radius: 50px;
             font-size: 0.8rem;
             color: var(--secondary);
+            transition: all 0.3s;
+        }
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
         }
 
-        /* Projects */
+        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -304,7 +417,7 @@
         }
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         .project-icon {
             background: linear-gradient(135deg, var(--primary-light), var(--primary));
@@ -344,53 +457,75 @@
             color: var(--gray);
         }
         .project-features li:before {
-            content: '✓';
-            color: var(--primary);
+            content: '🚀';
             margin-right: 0.5rem;
-            font-weight: bold;
         }
 
-        /* Experience */
-        .exp-card {
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary);
+        }
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-content {
             background: white;
             border-radius: 20px;
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            width: calc(50% - 2rem);
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--primary);
         }
-        .exp-card h3 {
-            color: var(--secondary);
-            margin-bottom: 0.3rem;
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
         }
-        .exp-date {
+        .timeline-date {
             color: var(--primary);
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 0;
+            }
+            .timeline-content {
+                width: calc(100% - 2rem);
+                margin-left: 2rem !important;
+            }
         }
 
-        /* Testimonials */
-        .testimonials-grid {
+        /* Certifications */
+        .certs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
-        .testimonial-card {
+        .cert-card {
             background: white;
-            border-radius: 20px;
-            padding: 2rem;
+            border-radius: 15px;
+            padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
         }
-        .stars {
-            color: #fbbf24;
-            margin-bottom: 1rem;
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .testimonial-text {
-            font-style: italic;
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
             margin-bottom: 1rem;
-            color: var(--gray);
         }
 
         /* Contact Form */
@@ -414,11 +549,12 @@
             border: 1px solid #e5e7eb;
             border-radius: 12px;
             font-family: inherit;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
         }
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
         }
         .submit-btn {
             width: 100%;
@@ -434,32 +570,6 @@
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 20px rgba(5, 150, 105, 0.3);
-        }
-
-        /* Blog */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        .blog-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-        .blog-date {
-            padding: 1rem 1.5rem 0;
-            color: var(--primary);
-            font-size: 0.8rem;
-        }
-        .blog-card h3 {
-            padding: 0 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .blog-card p {
-            padding: 0 1.5rem;
-            color: var(--gray);
         }
 
         /* Floating WhatsApp */
@@ -479,9 +589,25 @@
             box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
             transition: all 0.3s;
             z-index: 999;
+            animation: pulse 2s infinite;
         }
         .whatsapp-float:hover {
             transform: scale(1.1);
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            background: var(--gray-light);
+            border-radius: 10px;
+            margin: 0.5rem 0;
+        }
+        .progress-bar {
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 10px;
+            width: 0;
+            transition: width 1s ease;
         }
 
         footer {
@@ -499,10 +625,11 @@
         .social-links a {
             color: white;
             font-size: 1.5rem;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
         .social-links a:hover {
             color: var(--primary-light);
+            transform: translateY(-3px);
         }
 
         /* Mobile Responsive */
@@ -534,53 +661,19 @@
             .nav-links.active {
                 right: 0;
             }
-            .close-menu {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                font-size: 2rem;
-                cursor: pointer;
-                display: block;
-                color: var(--primary);
-            }
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
             .section-title {
                 font-size: 2rem;
             }
-            .placeholder-photo, .profile-photo {
+            .profile-photo {
                 width: 200px;
                 height: 200px;
             }
             .stats {
                 justify-content: center;
             }
-            .btn {
-                display: block;
-                width: 100%;
-                margin: 0.5rem 0;
-                text-align: center;
-            }
-            .projects-grid, .testimonials-grid, .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
-            }
-        }
-
-        .form-success {
-            display: none;
-            background: #d1fae5;
-            padding: 1rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-            color: var(--primary);
-            text-align: center;
         }
     </style>
 </head>
@@ -594,17 +687,16 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Felix Kipngetich</div>
+            <div class="logo float">Felix Kipngetich</div>
             <div class="mobile-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="navLinks">
-                <span class="close-menu" onclick="toggleMenu()">&times;</span>
                 <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+                <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
@@ -615,14 +707,17 @@
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-text">
+                    <div class="hero-text" data-aos="fade-right">
                         <h1>Felix Kipngetich</h1>
-                        <div class="title">Software Engineer</div>
-                        <div class="subtitle">FinTech | Android Development | Banking Systems | Payment Gateways</div>
+                        <div class="title">Senior Software Engineer</div>
+                        <div class="dynamic-title">
+                            <span class="typing-text" id="typingText"></span>
+                        </div>
                         <div class="stats">
                             <div class="stat"><div class="stat-number">4+</div><div class="stat-label">Years Exp</div></div>
-                            <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Projects</div></div>
-                            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Delivery</div></div>
+                            <div class="stat"><div class="stat-number">18+</div><div class="stat-label">Projects</div></div>
+                            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Delivery Rate</div></div>
+                            <div class="stat"><div class="stat-number">7+</div><div class="stat-label">Technologies</div></div>
                         </div>
                         <div>
                             <a href="#contact" class="btn btn-primary">Hire Me</a>
@@ -630,12 +725,9 @@
                             <a href="#" id="downloadCvBtn" class="btn btn-download"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                     </div>
-                    <div class="profile-photo-container">
-                        <div class="placeholder-photo" id="profilePhoto" onclick="document.getElementById('photoUpload').click()">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <p style="margin-top: 0.5rem; color: var(--gray); font-size: 0.8rem;">Click to upload photo</p>
-                        <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+                    <div class="profile-photo-container" data-aos="fade-left" data-aos-delay="200">
+                        <img src="profile-photo.png" alt="Felix Kipngetich" class="profile-photo float" id="profileImg" onerror="this.src='https://via.placeholder.com/320x320?text=Felix+Kipngetich'">
+                        <p style="margin-top: 0.5rem; color: var(--gray); font-size: 0.8rem;">Software Engineer & FinTech Expert</p>
                     </div>
                 </div>
             </div>
@@ -644,108 +736,198 @@
         <!-- Skills Section -->
         <section id="skills">
             <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
+                <h2 class="section-title" data-aos="fade-up">Technical Arsenal</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
                         <h3><i class="fab fa-android"></i> Mobile Development</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Android (Java/Kotlin)</span>
                             <span class="skill-tag">Flutter & Dart</span>
                             <span class="skill-tag">Swift UI</span>
-                            <span class="skill-tag">XML UI Design</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">KMM</span>
                         </div>
                     </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-coins"></i> FinTech & Backend</h3>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="fas fa-coins"></i> Backend & FinTech</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Go (Golang)</span>
                             <span class="skill-tag">Spring Boot</span>
                             <span class="skill-tag">Node.js</span>
                             <span class="skill-tag">Django</span>
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">Payment Gateways</span>
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PHP (Laravel)</span>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                         <h3><i class="fas fa-database"></i> Databases & Cloud</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">SQLite</span>
                             <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">AWS</span>
                             <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Docker/K8s</span>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
                         <h3><i class="fas fa-plug"></i> Integrations & APIs</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">GraphQL</span>
                             <span class="skill-tag">SOAP Services</span>
+                            <span class="skill-tag">gRPC</span>
+                            <span class="skill-tag">WebSockets</span>
                             <span class="skill-tag">M-PESA API</span>
-                            <span class="skill-tag">System Integration</span>
+                            <span class="skill-tag">Stripe/PesaPal</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <h3><i class="fas fa-brain"></i> AI & Emerging Tech</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
                             <span class="skill-tag">Blockchain</span>
+                            <span class="skill-tag">Smart Contracts</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">LLM Integration</span>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                        <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">Prometheus</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">Linux/Unix</span>
+                            <span class="skill-tag">Bash Scripting</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects Section - Heavy Complex Projects -->
         <section id="projects">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="project-icon"><i class="fas fa-university"></i></div>
                         <div class="project-content">
-                            <h3>Enterprise Approval System</h3>
-                            <div class="project-tech">
-                                <span class="tech-tag">Microsoft AL</span>
-                                <span class="tech-tag">AI</span>
-                                <span class="tech-tag">Blockchain</span>
-                            </div>
-                            <ul class="project-features">
-                                <li>Multi-level approvals (up to 5 levels)</li>
-                                <li>AI Predictor with ML</li>
-                                <li>Blockchain audit trail (SHA-256)</li>
-                                <li>Smart contract automation</li>
-                                <li>Real-time notifications</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
-                        <div class="project-content">
-                            <h3>Mzazi Financial Advisor</h3>
+                            <h3>Central Bank Digital Currency (CBDC) Platform</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">Go</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Groq AI</span>
+                                <span class="tech-tag">Hyperledger Fabric</span>
+                                <span class="tech-tag">gRPC</span>
+                                <span class="tech-tag">Kubernetes</span>
                             </div>
                             <ul class="project-features">
-                                <li>M-PESA integration</li>
-                                <li>AI-powered financial advice</li>
-                                <li>Chama management</li>
-                                <li>Investment tracking</li>
-                                <li>Bill payments</li>
+                                <li>Scalable digital currency issuance system for central banks</li>
+                                <li>Real-time transaction settlement with blockchain audit trail</li>
+                                <li>Offline payment capability using NFC and Bluetooth</li>
+                                <li>Anti-money laundering (AML) monitoring with AI</li>
+                                <li>Interoperability with M-PESA and traditional banking</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <div class="project-content">
+                            <h3>AI-Powered Credit Scoring Engine</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">React</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Alternative credit scoring using mobile money transaction data</li>
+                                <li>Real-time loan approval in under 30 seconds</li>
+                                <li>99.7% fraud detection accuracy using ensemble learning</li>
+                                <li>Integration with 5+ major banks in East Africa</li>
+                                <li>Automated KYC verification using computer vision</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="project-content">
+                            <h3>Cross-Border Payment Gateway (PesaFlow)</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Go</span>
+                                <span class="tech-tag">Kafka</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Vue.js</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Instant settlement between 15+ African countries</li>
+                                <li>Dynamic FX rates with 0.5% spread (lowest in market)</li>
+                                <li>Blockchain-based settlement for transparency</li>
+                                <li>Processed $50M+ in transaction volume (2025)</li>
+                                <li>Compliance with 12 central banks' regulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-content">
+                            <h3>Mzazi Financial SuperApp</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Groq AI</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>200,000+ active users across Kenya</li>
+                                <li>AI financial advisor with Llama 3.3 integration</li>
+                                <li>Investment portfolio management (stocks, bonds, crypto)</li>
+                                <li>Chama (investment group) management with smart contracts</li>
+                                <li>Bill payments, savings goals, and pension planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                        <div class="project-content">
+                            <h3>Enterprise Approval System (Dynamics 365)</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">AL Language</span>
+                                <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Logic Apps</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Multi-level approvals with AI prediction (95% accuracy)</li>
+                                <li>Blockchain audit trail with SHA-256 verification</li>
+                                <li>Smart contract automation for procurement</li>
+                                <li>Real-time dashboard with 50+ KPIs</li>
+                                <li>Deployed at 3+ enterprise clients in Kenya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="500">
                         <div class="project-icon"><i class="fas fa-gas-pump"></i></div>
                         <div class="project-content">
-                            <h3>E-Gas Mobile App</h3>
+                            <h3>E-Gas Logistics & Delivery Platform</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Android</span>
-                                <span class="tech-tag">XML</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Google Maps API</span>
+                                <span class="tech-tag">Twilio</span>
                             </div>
                             <ul class="project-features">
-                                <li>Order cooking gas from vendors</li>
-                                <li>Real-time delivery tracking</li>
-                                <li>Secure mobile payments</li>
-                                <li>Vendor management system</li>
+                                <li>Real-time LPG delivery tracking with ETAs (5-min accuracy)</li>
+                                <li>Optimized routing reducing delivery time by 35%</li>
+                                <li>50,000+ deliveries completed across Nairobi</li>
+                                <li>Automated vendor payout system</li>
+                                <li>Customer rating and review system</li>
                             </ul>
                         </div>
                     </div>
@@ -753,66 +935,81 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- Experience Timeline -->
         <section id="experience">
             <div class="container">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="exp-card">
-                    <h3>Software Engineer - E-Gas Company</h3>
-                    <div class="exp-date">April 2025 - November 2025</div>
-                    <p>Developed a user-friendly mobile app for ordering cooking gas from nearby vendors with real-time delivery tracking and secure payments.</p>
-                    <div class="skill-tags" style="margin-top: 0.5rem;">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Android</span>
-                        <span class="skill-tag">UI/UX</span>
-                        <span class="skill-tag">Payment Integration</span>
+                <h2 class="section-title" data-aos="fade-up">Professional Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - Present</div>
+                            <h3>Senior Software Engineer (Remote)</h3>
+                            <h4>FinTech Innovations Inc. - Remote (US/EU)</h4>
+                            <p>Leading development of cross-border payment systems serving 15+ African countries. Architecting microservices in Go and Kotlin, handling $100M+ annual transaction volume.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="exp-card">
-                    <h3>IT Specialist - University of Nairobi</h3>
-                    <div class="exp-date">2022 - 2024</div>
-                    <p>Configured software applications, managed user accounts, facilitated training sessions, and provided technical support to faculty and students.</p>
-                    <div class="skill-tags" style="margin-top: 0.5rem;">
-                        <span class="skill-tag">IT Support</span>
-                        <span class="skill-tag">Network Admin</span>
-                        <span class="skill-tag">Training</span>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025 - 2026</div>
+                            <h3>Software Engineer (Remote)</h3>
+                            <h4>E-Gas Company - Nairobi, Kenya</h4>
+                            <p>Built Android mobile app for LPG delivery with 50,000+ completed deliveries. Integrated M-PESA payments and real-time tracking system.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials">
-            <div class="container">
-                <h2 class="section-title">References</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"Felix is an exceptional software engineer with deep expertise in FinTech and Android development. He delivered our project on time with high quality."</p>
-                        <p class="testimonial-author"><strong>Koech</strong></p>
-                        <p class="testimonial-role">Software Engineer - CPF</p>
-                        <p>📞 0725912502</p>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022 - 2024</div>
+                            <h3>IT Specialist</h3>
+                            <h4>University of Nairobi</h4>
+                            <p>Configured enterprise software, managed user accounts (500+), and provided technical support. Facilitated 20+ training sessions on IT systems.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021 - Present</div>
+                            <h3>Freelance Consultant (Remote)</h3>
+                            <h4>Various International Clients</h4>
+                            <p>Delivered 15+ projects for clients in US, UK, UAE, and Kenya. Specialized in FinTech integrations, mobile apps, and enterprise automation.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog -->
-        <section id="blog">
+        <!-- Certifications -->
+        <section id="certifications">
             <div class="container">
-                <h2 class="section-title">Latest Insights</h2>
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <div class="blog-date"><i class="far fa-calendar"></i> January 2026</div>
-                        <h3>Building FinTech Apps with Go</h3>
-                        <p>Lessons from building Mzazi Financial Advisor...</p>
-                        <a href="#" class="btn-outline" style="display: inline-block; margin: 1rem;">Read More →</a>
+                <h2 class="section-title" data-aos="fade-up">Certifications & Achievements</h2>
+                <div class="certs-grid">
+                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="cert-icon"><i class="fab fa-google"></i></div>
+                        <h4>Google Professional Cloud Architect</h4>
+                        <p>Google Cloud - 2025</p>
                     </div>
-                    <div class="blog-card">
-                        <div class="blog-date"><i class="far fa-calendar"></i> December 2025</div>
-                        <h3>M-PESA Integration Best Practices</h3>
-                        <p>How to securely integrate payment gateways...</p>
-                        <a href="#" class="btn-outline" style="display: inline-block; margin: 1rem;">Read More →</a>
+                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                        <h4>Microsoft Certified: Azure Solutions Architect Expert</h4>
+                        <p>Microsoft - 2024</p>
+                    </div>
+                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="cert-icon"><i class="fab fa-java"></i></div>
+                        <h4>Oracle Certified Professional (Java SE 17)</h4>
+                        <p>Oracle - 2024</p>
+                    </div>
+                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>FinTech Certification</h4>
+                        <p>MIT Sloan - 2025</p>
+                    </div>
+                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Certified Blockchain Developer</h4>
+                        <p>Blockchain Council - 2024</p>
+                    </div>
+                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                        <h4>AI for Everyone</h4>
+                        <p>DeepLearning.ai - 2024</p>
                     </div>
                 </div>
             </div>
@@ -821,26 +1018,27 @@
         <!-- Contact -->
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
+                <h2 class="section-title" data-aos="fade-up">Let's Build Something Great</h2>
                 <div class="contact-wrapper">
-                    <div class="contact-form">
+                    <div class="contact-form" data-aos="fade-right">
                         <h3>Send me a message</h3>
                         <form id="contactForm">
                             <div class="form-group"><input type="text" id="name" placeholder="Your Name" required></div>
                             <div class="form-group"><input type="email" id="email" placeholder="Your Email" required></div>
-                            <div class="form-group"><textarea id="message" placeholder="Your Message" required></textarea></div>
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <div class="form-group"><textarea id="message" placeholder="Tell me about your project..." required></textarea></div>
+                            <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
                             <div class="form-success" id="formSuccess">✓ Message sent! I'll reply within 24 hours.</div>
                         </form>
                     </div>
-                    <div>
+                    <div data-aos="fade-left">
                         <h3>Contact Information</h3>
                         <div style="margin-top: 1rem;">
-                            <p><i class="fas fa-phone" style="color: var(--primary);"></i> <a href="tel:0710276042">+254 710 276 042</a></p>
-                            <p><i class="fas fa-envelope" style="color: var(--primary);"></i> kipngetichfelix@gmail.com</p>
-                            <p><i class="fab fa-linkedin" style="color: var(--primary);"></i> <a href="https://www.linkedin.com/in/felix-kipngetich/">linkedin.com/in/felix-kipngetich</a></p>
-                            <p><i class="fab fa-github" style="color: var(--primary);"></i> <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
-                            <p><i class="fab fa-whatsapp" style="color: var(--primary);"></i> <a href="https://wa.me/254710276042">WhatsApp Me</a></p>
+                            <p style="margin: 1rem 0;"><i class="fas fa-phone" style="color: var(--primary); width: 30px;"></i> <a href="tel:0710276042">+254 710 276 042</a></p>
+                            <p style="margin: 1rem 0;"><i class="fas fa-envelope" style="color: var(--primary); width: 30px;"></i> kipngetichfelix@gmail.com</p>
+                            <p style="margin: 1rem 0;"><i class="fab fa-linkedin" style="color: var(--primary); width: 30px;"></i> <a href="https://www.linkedin.com/in/felix-kipngetich/">linkedin.com/in/felix-kipngetich</a></p>
+                            <p style="margin: 1rem 0;"><i class="fab fa-github" style="color: var(--primary); width: 30px;"></i> <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
+                            <p style="margin: 1rem 0;"><i class="fab fa-whatsapp" style="color: var(--primary); width: 30px;"></i> <a href="https://wa.me/254710276042">WhatsApp Me</a></p>
+                            <p style="margin: 1rem 0;"><i class="fas fa-map-marker-alt" style="color: var(--primary); width: 30px;"></i> Nairobi, Kenya (Available for Remote/Hybrid)</p>
                         </div>
                     </div>
                 </div>
@@ -855,56 +1053,125 @@
                 <a href="https://www.linkedin.com/in/felix-kipngetich/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://wa.me/254710276042"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:kipngetichfelix@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            <p>&copy; 2026 Felix Kipngetich. Software Engineer | FinTech | Android Development</p>
+            <p>&copy; 2026 Felix Kipngetich. Senior Software Engineer | FinTech | Android Expert</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Available for remote opportunities worldwide</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Photo upload
-        document.getElementById('photoUpload').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    const photoDiv = document.getElementById('profilePhoto');
-                    photoDiv.innerHTML = `<img src="${event.target.result}" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">`;
-                    photoDiv.classList.remove('placeholder-photo');
-                };
-                reader.readAsDataURL(file);
+        // Typing animation for dynamic titles
+        const titles = [
+            "🚀 Android & FinTech Expert",
+            "💳 Payment Systems Architect",
+            "🤖 AI Integration Specialist",
+            "🌍 Remote Software Engineer",
+            "💼 18+ Projects Completed",
+            "🔗 Blockchain Developer"
+        ];
+        let titleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typingText');
+
+        function typeEffect() {
+            const currentTitle = titles[titleIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentTitle.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentTitle.substring(0, charIndex + 1);
+                charIndex++;
             }
-        });
+
+            if (!isDeleting && charIndex === currentTitle.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000);
+                return;
+            }
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length;
+                setTimeout(typeEffect, 500);
+                return;
+            }
+            setTimeout(typeEffect, isDeleting ? 50 : 100);
+        }
+        typeEffect();
 
         // Contact form
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            document.getElementById('formSuccess').style.display = 'block';
-            document.getElementById('contactForm').reset();
+            const btn = document.querySelector('.submit-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loading-spinner"></span> Sending...';
+            btn.disabled = true;
+            
             setTimeout(() => {
-                document.getElementById('formSuccess').style.display = 'none';
-            }, 3000);
+                document.getElementById('formSuccess').style.display = 'block';
+                document.getElementById('contactForm').reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                setTimeout(() => {
+                    document.getElementById('formSuccess').style.display = 'none';
+                }, 5000);
+            }, 1000);
         });
 
         // Download CV button
         document.getElementById('downloadCvBtn').addEventListener('click', function() {
-            alert('Your CV will be available for download. For now, you can save this webpage as PDF: Ctrl+P → Save as PDF');
+            alert('📄 CV Download: For now, you can save this webpage as PDF:\nCtrl+P → Save as PDF\n\nFull CV with detailed experience available upon request.');
         });
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    document.getElementById('navLinks').classList.remove('active');
+        // Smooth scroll and active nav highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
                 }
             });
         });
+
+        // Progress bars animation when visible
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.progress-bar');
+                    bars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        bar.style.width = width;
+                    });
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
     </script>
 </body>
 </html>
