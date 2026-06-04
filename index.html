@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felix Edu | Software Developer & Automation Specialist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO Meta Tags -->
+    <title>Felix Kipngetich | Software Engineer | FinTech & Android Developer</title>
+    <meta name="description" content="Felix Kipngetich - Software Engineer specializing in Android Development, FinTech, Banking Systems, and Payment Gateways. Expert in Kotlin, Go, Java, and Enterprise Solutions.">
+    <meta name="keywords" content="Felix Kipngetich, Software Engineer, Android Developer, FinTech, Kotlin, Go, Java, Payment Systems, Banking, Nairobi, Kenya">
+    <meta name="author" content="Felix Kipngetich">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Felix Kipngetich | Software Engineer">
+    <meta property="og:description" content="Android Development | FinTech | Banking Systems | Payment Gateways">
+    <meta property="og:type" content="portfolio">
+    <meta property="og:url" content="https://Edufel45.github.io/my-portfolio">
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -13,22 +32,32 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
-            background: #0f0f1a;
-            color: #e0e0e0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            color: #1a1a2e;
             line-height: 1.6;
             scroll-behavior: smooth;
         }
 
-        /* Custom Scrollbar */
+        /* Theme Colors - Green/Teal (FinTech vibe) */
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #10b981;
+            --secondary: #0f172a;
+            --accent: #14b8a6;
+            --gray-light: #f3f4f6;
+            --gray: #6b7280;
+        }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: #1a1a2e;
+            background: #e5e7eb;
         }
         ::-webkit-scrollbar-thumb {
-            background: #00d9ff;
+            background: var(--primary);
             border-radius: 5px;
         }
 
@@ -37,28 +66,27 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 15, 26, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
         .nav-container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-            color: #00d9ff;
-        }
-        .logo span {
-            color: #fff;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         .nav-links {
             display: flex;
@@ -66,22 +94,26 @@
             list-style: none;
         }
         .nav-links a {
-            color: #e0e0e0;
+            color: var(--secondary);
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
         }
         .nav-links a:hover {
-            color: #00d9ff;
+            color: var(--primary);
         }
         .mobile-menu {
             display: none;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
+            color: var(--primary);
+        }
+        .close-menu {
+            display: none;
         }
 
-        /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -92,163 +124,200 @@
             display: flex;
             align-items: center;
             padding-top: 80px;
-            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
         }
         .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
         .hero-text h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, #00d9ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
         }
         .hero-text .title {
             font-size: 1.3rem;
-            color: #00d9ff;
+            color: var(--primary);
+            font-weight: 600;
             margin-bottom: 1rem;
         }
-        .hero-text .location {
-            display: inline-block;
-            background: rgba(0, 217, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin: 1rem 0;
-            border: 1px solid rgba(0, 217, 255, 0.3);
+        .hero-text .subtitle {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
         }
-        .availability {
-            background: rgba(0, 255, 100, 0.1);
-            color: #00ff64;
-            border: 1px solid rgba(0, 255, 100, 0.3);
+        .profile-photo-container {
+            text-align: center;
+        }
+        .profile-photo {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
+        }
+        .placeholder-photo {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .placeholder-photo:hover {
+            transform: scale(1.02);
         }
         .stats {
             display: flex;
             gap: 2rem;
             margin: 2rem 0;
+            flex-wrap: wrap;
         }
         .stat {
             text-align: center;
         }
         .stat-number {
             font-size: 2rem;
-            font-weight: bold;
-            color: #00d9ff;
+            font-weight: 800;
+            color: var(--primary);
         }
         .stat-label {
             font-size: 0.8rem;
-            color: #888;
+            color: var(--gray);
         }
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 1.8rem;
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s;
             margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
         }
         .btn-primary {
-            background: linear-gradient(135deg, #00d9ff, #0099cc);
-            color: #0f0f1a;
-            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
         }
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
         }
         .btn-outline {
-            border: 2px solid #00d9ff;
-            color: #00d9ff;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
         }
         .btn-outline:hover {
-            background: #00d9ff;
-            color: #0f0f1a;
+            background: var(--primary);
+            color: white;
         }
-        .hero-image {
-            text-align: center;
+        .btn-download {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
         }
-        .code-icon {
-            font-size: 12rem;
-            color: #00d9ff;
-            opacity: 0.5;
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
         }
 
-        /* Sections */
         section {
             padding: 5rem 0;
         }
         .section-title {
             font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
-            position: relative;
+            color: var(--secondary);
         }
         .section-title:after {
             content: '';
             display: block;
             width: 60px;
-            height: 3px;
-            background: #00d9ff;
+            height: 4px;
+            background: var(--primary);
             margin: 0.5rem auto;
+            border-radius: 2px;
         }
 
-        /* Skills Grid */
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
         .skill-card {
-            background: rgba(26, 26, 46, 0.6);
-            border-radius: 15px;
-            padding: 1.5rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 217, 255, 0.1);
-            transition: transform 0.3s;
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
         }
         .skill-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(0, 217, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary-light);
         }
         .skill-card h3 {
-            color: #00d9ff;
+            color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
-        .skill-card ul {
-            list-style: none;
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
-        .skill-card li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .skill-card li:before {
-            content: '▹';
-            color: #00d9ff;
-            margin-right: 0.5rem;
+        .skill-tag {
+            background: var(--gray-light);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--secondary);
         }
 
-        /* Project Cards */
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
         .project-card {
-            background: rgba(26, 26, 46, 0.6);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #00d9ff;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             transition: all 0.3s;
+            border: 1px solid #e5e7eb;
         }
         .project-card:hover {
-            transform: translateX(10px);
-            background: rgba(26, 26, 46, 0.8);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        .project-card h3 {
-            color: #00d9ff;
+        .project-icon {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            padding: 2rem;
+            text-align: center;
+            font-size: 3rem;
+            color: white;
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+        .project-content h3 {
+            color: var(--secondary);
             margin-bottom: 0.5rem;
         }
         .project-tech {
@@ -258,112 +327,285 @@
             margin: 1rem 0;
         }
         .tech-tag {
-            background: rgba(0, 217, 255, 0.1);
+            background: var(--gray-light);
             padding: 0.2rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.8rem;
-            color: #00d9ff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
         }
-        .project-link {
-            color: #00d9ff;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
+        .project-features {
+            list-style: none;
+            margin-top: 1rem;
         }
-        .project-link:hover {
-            gap: 0.8rem;
+        .project-features li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        .project-features li:before {
+            content: '✓';
+            color: var(--primary);
+            margin-right: 0.5rem;
+            font-weight: bold;
         }
 
         /* Experience */
-        .exp-item {
-            background: rgba(26, 26, 46, 0.6);
-            border-radius: 15px;
-            padding: 1.5rem;
+        .exp-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+        .exp-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+        .exp-date {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
             margin-bottom: 1rem;
         }
-        .exp-highlight {
-            display: inline-block;
-            background: rgba(0, 217, 255, 0.2);
-            padding: 0.3rem 0.8rem;
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial-card {
+            background: white;
             border-radius: 20px;
-            font-size: 0.8rem;
-            margin: 0.5rem 0.5rem 0.5rem 0;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--gray);
         }
 
-        /* Footer */
+        /* Contact Form */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(5, 150, 105, 0.3);
+        }
+
+        /* Blog */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .blog-date {
+            padding: 1rem 1.5rem 0;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+        .blog-card h3 {
+            padding: 0 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .blog-card p {
+            padding: 0 1.5rem;
+            color: var(--gray);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
         footer {
-            background: #0a0a14;
+            background: var(--secondary);
+            color: white;
             padding: 3rem 0;
             text-align: center;
-            border-top: 1px solid rgba(0, 217, 255, 0.1);
         }
-        .contact-info {
+        .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        .contact-info a {
-            color: #e0e0e0;
-            text-decoration: none;
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
             transition: color 0.3s;
         }
-        .contact-info a:hover {
-            color: #00d9ff;
-        }
-        .copyright {
-            color: #666;
-            font-size: 0.8rem;
+        .social-links a:hover {
+            color: var(--primary-light);
         }
 
-        /* Responsive */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 2rem;
             }
             .hero-text h1 {
                 font-size: 2rem;
             }
-            .stats {
-                justify-content: center;
-            }
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                text-align: center;
-                padding: 1rem 0;
-            }
-            .nav-links.active {
-                display: flex;
-            }
             .mobile-menu {
                 display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.3s;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 2rem;
+                cursor: pointer;
+                display: block;
+                color: var(--primary);
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
             }
             .section-title {
                 font-size: 2rem;
             }
+            .placeholder-photo, .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+            .stats {
+                justify-content: center;
+            }
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            .projects-grid, .testimonials-grid, .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        .form-success {
+            display: none;
+            background: #d1fae5;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            color: var(--primary);
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/254710276042?text=Hi%20Felix,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Felix<span>Edu</span></div>
+            <div class="logo">Felix Kipngetich</div>
             <div class="mobile-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="navLinks">
+                <span class="close-menu" onclick="toggleMenu()">&times;</span>
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -374,33 +616,26 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Felix Edu</h1>
-                        <div class="title">Software Developer & Automation Specialist</div>
-                        <div>
-                            <span class="location"><i class="fas fa-map-marker-alt"></i> 10 Minutes from Bayer Ruaraka HQ</span>
-                            <span class="location availability"><i class="fas fa-clock"></i> Immediate Availability</span>
-                        </div>
+                        <h1>Felix Kipngetich</h1>
+                        <div class="title">Software Engineer</div>
+                        <div class="subtitle">FinTech | Android Development | Banking Systems | Payment Gateways</div>
                         <div class="stats">
-                            <div class="stat">
-                                <div class="stat-number">3+</div>
-                                <div class="stat-label">Years Experience</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">12+</div>
-                                <div class="stat-label">Projects Completed</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">95%</div>
-                                <div class="stat-label">Client Satisfaction</div>
-                            </div>
+                            <div class="stat"><div class="stat-number">4+</div><div class="stat-label">Years Exp</div></div>
+                            <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Projects</div></div>
+                            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Delivery</div></div>
                         </div>
                         <div>
-                            <a href="#projects" class="btn btn-primary">View My Work</a>
-                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                            <a href="#contact" class="btn btn-primary">Hire Me</a>
+                            <a href="#projects" class="btn btn-outline">View Work</a>
+                            <a href="#" id="downloadCvBtn" class="btn btn-download"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                     </div>
-                    <div class="hero-image">
-                        <i class="fas fa-code code-icon"></i>
+                    <div class="profile-photo-container">
+                        <div class="placeholder-photo" id="profilePhoto" onclick="document.getElementById('photoUpload').click()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <p style="margin-top: 0.5rem; color: var(--gray); font-size: 0.8rem;">Click to upload photo</p>
+                        <input type="file" id="photoUpload" accept="image/*" style="display: none;">
                     </div>
                 </div>
             </div>
@@ -412,34 +647,45 @@
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <h3><i class="fas fa-microchip"></i> Hardware & Systems</h3>
-                        <ul>
-                            <li>PC Assembly & Troubleshooting</li>
-                            <li>Windows OS (All versions)</li>
-                            <li>Network Setup & Configuration</li>
-                            <li>Printer Support</li>
-                            <li>Data Recovery</li>
-                            <li>Software Installation</li>
-                        </ul>
+                        <h3><i class="fab fa-android"></i> Mobile Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Android (Java/Kotlin)</span>
+                            <span class="skill-tag">Flutter & Dart</span>
+                            <span class="skill-tag">Swift UI</span>
+                            <span class="skill-tag">XML UI Design</span>
+                        </div>
                     </div>
                     <div class="skill-card">
-                        <h3><i class="fas fa-laptop-code"></i> Development</h3>
-                        <ul>
-                            <li>Node.js / Express</li>
-                            <li>React.js</li>
-                            <li>SQLite / PostgreSQL</li>
-                            <li>HTML5 / CSS3 / JavaScript</li>
-                            <li>Git & GitHub</li>
-                            <li>API Integration</li>
-                        </ul>
+                        <h3><i class="fas fa-coins"></i> FinTech & Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Go (Golang)</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Payment Gateways</span>
+                        </div>
                     </div>
                     <div class="skill-card">
-                        <h3><i class="fas fa-language"></i> Languages</h3>
-                        <ul>
-                            <li>English (Fluent)</li>
-                            <li>Swahili (Native)</li>
-                            <li>Kalenjin (Native)</li>
-                        </ul>
+                        <h3><i class="fas fa-database"></i> Databases & Cloud</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-plug"></i> Integrations & APIs</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">SOAP Services</span>
+                            <span class="skill-tag">M-PESA API</span>
+                            <span class="skill-tag">System Integration</span>
+                            <span class="skill-tag">Blockchain</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -449,54 +695,59 @@
         <section id="projects">
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
-                
-                <div class="project-card">
-                    <h3>🚀 Bayer Seminis Automation Suite</h3>
-                    <p>A production-ready automation system built specifically for Bayer Kenya's Digital Support Intern role requirements.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">REST API</span>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                        <div class="project-content">
+                            <h3>Enterprise Approval System</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Microsoft AL</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Blockchain</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Multi-level approvals (up to 5 levels)</li>
+                                <li>AI Predictor with ML</li>
+                                <li>Blockchain audit trail (SHA-256)</li>
+                                <li>Smart contract automation</li>
+                                <li>Real-time notifications</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                        <li>Procurement Automation - Auto-creates purchase orders when stock hits minimum levels</li>
-                        <li>Authentication Codes - Self-service promotion code generation with real-time tracking</li>
-                        <li>Digital Community Management - WhatsApp/Facebook/Instagram auto-responder with AI intent detection</li>
-                        <li>Reporting Dashboard - Real-time analytics, PDF/Excel export, vendor scorecards</li>
-                    </ul>
-                    <a href="#" class="project-link">Live Demo →</a>
-                    <a href="https://github.com/Edufel45" class="project-link" style="margin-left: 1.5rem;">GitHub →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>🏢 Enterprise CRM System</h3>
-                    <p>Full-stack CRM using React, Node.js, and PostgreSQL. Features include lead tracking, customer segmentation, and automated follow-up emails.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-content">
+                            <h3>Mzazi Financial Advisor</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Go</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Groq AI</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>M-PESA integration</li>
+                                <li>AI-powered financial advice</li>
+                                <li>Chama management</li>
+                                <li>Investment tracking</li>
+                                <li>Bill payments</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>🤖 AI Enterprise Approval System</h3>
-                    <p>Complete approval workflow system for Dynamics 365 Business Central with AI prediction, blockchain audit, and smart contracts.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AI/ML</span>
-                        <span class="tech-tag">Blockchain</span>
-                        <span class="tech-tag">Smart Contracts</span>
-                        <span class="tech-tag">Dynamics 365</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>📊 Inventory Forecasting System</h3>
-                    <p>AI-powered demand prediction and auto-reorder engine using historical sales data and seasonal trend analysis.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Pandas</span>
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-gas-pump"></i></div>
+                        <div class="project-content">
+                            <h3>E-Gas Mobile App</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">XML</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Order cooking gas from vendors</li>
+                                <li>Real-time delivery tracking</li>
+                                <li>Secure mobile payments</li>
+                                <li>Vendor management system</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -505,94 +756,154 @@
         <!-- Experience Section -->
         <section id="experience">
             <div class="container">
-                <h2 class="section-title">Key Achievements</h2>
-                <div class="exp-item">
-                    <h3>📦 Data Entry & Operations Excellence</h3>
-                    <div>
-                        <span class="exp-highlight"><i class="fas fa-check-circle"></i> 500+ shipment records weekly</span>
-                        <span class="exp-highlight"><i class="fas fa-check-circle"></i> 99.9% accuracy rate</span>
-                        <span class="exp-highlight"><i class="fas fa-chart-line"></i> 40% error reduction</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="exp-card">
+                    <h3>Software Engineer - E-Gas Company</h3>
+                    <div class="exp-date">April 2025 - November 2025</div>
+                    <p>Developed a user-friendly mobile app for ordering cooking gas from nearby vendors with real-time delivery tracking and secure payments.</p>
+                    <div class="skill-tags" style="margin-top: 0.5rem;">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">Payment Integration</span>
                     </div>
-                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
-                        <li>Managed inventory database for 10+ client accounts</li>
-                        <li>Generated weekly operational reports for management review</li>
-                        <li>Implemented data validation processes reducing errors by 40%</li>
-                        <li>Coordinated with warehouse team for accurate stock reconciliation</li>
-                    </ul>
+                </div>
+                <div class="exp-card">
+                    <h3>IT Specialist - University of Nairobi</h3>
+                    <div class="exp-date">2022 - 2024</div>
+                    <p>Configured software applications, managed user accounts, facilitated training sessions, and provided technical support to faculty and students.</p>
+                    <div class="skill-tags" style="margin-top: 0.5rem;">
+                        <span class="skill-tag">IT Support</span>
+                        <span class="skill-tag">Network Admin</span>
+                        <span class="skill-tag">Training</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Certifications -->
-        <section id="education">
+        <!-- Testimonials -->
+        <section id="testimonials">
             <div class="container">
-                <h2 class="section-title">Education & Certifications</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                        <ul>
-                            <li><strong>Bachelor of Science in Information Technology</strong><br>KCA University, Nairobi<br>2021 - 2025</li>
-                        </ul>
-                        <p style="margin-top: 0.5rem; color: #888;">Relevant Coursework: Database Management, Software Engineering, Business Information Systems, Network Administration, Web Development</p>
+                <h2 class="section-title">References</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"Felix is an exceptional software engineer with deep expertise in FinTech and Android development. He delivered our project on time with high quality."</p>
+                        <p class="testimonial-author"><strong>Koech</strong></p>
+                        <p class="testimonial-role">Software Engineer - CPF</p>
+                        <p>📞 0725912502</p>
                     </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-certificate"></i> Certifications</h3>
-                        <ul>
-                            <li>Microsoft Office Specialist (MOS)</li>
-                            <li>IT Support Professional - Google</li>
-                            <li>Customer Service Excellence</li>
-                            <li>Data Entry Certification</li>
-                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog">
+            <div class="container">
+                <h2 class="section-title">Latest Insights</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-date"><i class="far fa-calendar"></i> January 2026</div>
+                        <h3>Building FinTech Apps with Go</h3>
+                        <p>Lessons from building Mzazi Financial Advisor...</p>
+                        <a href="#" class="btn-outline" style="display: inline-block; margin: 1rem;">Read More →</a>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-date"><i class="far fa-calendar"></i> December 2025</div>
+                        <h3>M-PESA Integration Best Practices</h3>
+                        <p>How to securely integrate payment gateways...</p>
+                        <a href="#" class="btn-outline" style="display: inline-block; margin: 1rem;">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-form">
+                        <h3>Send me a message</h3>
+                        <form id="contactForm">
+                            <div class="form-group"><input type="text" id="name" placeholder="Your Name" required></div>
+                            <div class="form-group"><input type="email" id="email" placeholder="Your Email" required></div>
+                            <div class="form-group"><textarea id="message" placeholder="Your Message" required></textarea></div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                            <div class="form-success" id="formSuccess">✓ Message sent! I'll reply within 24 hours.</div>
+                        </form>
+                    </div>
+                    <div>
+                        <h3>Contact Information</h3>
+                        <div style="margin-top: 1rem;">
+                            <p><i class="fas fa-phone" style="color: var(--primary);"></i> <a href="tel:0710276042">+254 710 276 042</a></p>
+                            <p><i class="fas fa-envelope" style="color: var(--primary);"></i> kipngetichfelix@gmail.com</p>
+                            <p><i class="fab fa-linkedin" style="color: var(--primary);"></i> <a href="https://www.linkedin.com/in/felix-kipngetich/">linkedin.com/in/felix-kipngetich</a></p>
+                            <p><i class="fab fa-github" style="color: var(--primary);"></i> <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
+                            <p><i class="fab fa-whatsapp" style="color: var(--primary);"></i> <a href="https://wa.me/254710276042">WhatsApp Me</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="contact">
+    <footer>
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 2rem;">Get In Touch</h2>
-            <div class="contact-info">
-                <a href="tel:0710276042"><i class="fas fa-phone"></i> 0710 276 042</a>
-                <a href="https://github.com/Edufel45" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:felixedu@example.com"><i class="fas fa-envelope"></i> Email</a>
+            <div class="social-links">
+                <a href="https://github.com/Edufel45"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/felix-kipngetich/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/254710276042"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:kipngetichfelix@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <div class="contact-info">
-                <span><i class="fas fa-map-marker-alt"></i> 10 Minutes from Bayer Ruaraka HQ, Nairobi</span>
-                <span><i class="fas fa-clock"></i> Immediate Availability</span>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2026 Felix Edu. Built with <i class="fas fa-code"></i> on GitHub Pages</p>
-            </div>
+            <p>&copy; 2026 Felix Kipngetich. Software Engineer | FinTech | Android Development</p>
         </div>
     </footer>
 
     <script>
         function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Smooth scrolling for navigation links
+        // Photo upload
+        document.getElementById('photoUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const photoDiv = document.getElementById('profilePhoto');
+                    photoDiv.innerHTML = `<img src="${event.target.result}" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">`;
+                    photoDiv.classList.remove('placeholder-photo');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formSuccess').style.display = 'block';
+            document.getElementById('contactForm').reset();
+            setTimeout(() => {
+                document.getElementById('formSuccess').style.display = 'none';
+            }, 3000);
+        });
+
+        // Download CV button
+        document.getElementById('downloadCvBtn').addEventListener('click', function() {
+            alert('Your CV will be available for download. For now, you can save this webpage as PDF: Ctrl+P → Save as PDF');
+        });
+
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
-                    document.querySelector('.nav-links').classList.remove('active');
+                    document.getElementById('navLinks').classList.remove('active');
                 }
             });
-        });
-
-        // Navbar background change on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(15, 15, 26, 0.98)';
-            } else {
-                nav.style.background = 'rgba(15, 15, 26, 0.95)';
-            }
         });
     </script>
 </body>
