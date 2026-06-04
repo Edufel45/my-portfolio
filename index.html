@@ -17,19 +17,20 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f7fa;
-            color: #1a1a2e;
+            background: #0a0e27;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
         /* Navigation Bar */
         nav {
-            background: white;
+            background: #0f1235;
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid #1e2a5e;
         }
         .nav-container {
             max-width: 1200px;
@@ -42,7 +43,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #059669;
+            color: #00d9ff;
         }
         .nav-links {
             display: flex;
@@ -51,18 +52,18 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: #374151;
+            color: #e0e0e0;
             font-weight: 500;
             transition: color 0.3s;
         }
         .nav-links a:hover {
-            color: #059669;
+            color: #00d9ff;
         }
         .mobile-menu {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #059669;
+            color: #00d9ff;
         }
 
         /* Container */
@@ -75,7 +76,7 @@
         /* Hero Section */
         .hero {
             padding: 4rem 0;
-            background: white;
+            background: linear-gradient(135deg, #0a0e27 0%, #0f1235 100%);
         }
         .hero-content {
             display: flex;
@@ -88,13 +89,13 @@
             flex: 1;
         }
         .hero-text h1 {
-            font-size: 2.5rem;
-            color: #1f2937;
+            font-size: 2.8rem;
+            color: #ffffff;
             margin-bottom: 0.5rem;
         }
         .hero-text .title {
             font-size: 1.2rem;
-            color: #059669;
+            color: #00d9ff;
             margin-bottom: 0.5rem;
         }
         .location-badges {
@@ -104,15 +105,16 @@
             margin: 1rem 0;
         }
         .badge {
-            background: #f3f4f6;
+            background: #1e2a5e;
             padding: 0.3rem 1rem;
             border-radius: 50px;
             font-size: 0.8rem;
-            color: #4b5563;
+            color: #e0e0e0;
         }
         .badge-green {
-            background: #d1fae5;
-            color: #059669;
+            background: #00d9ff20;
+            color: #00d9ff;
+            border: 1px solid #00d9ff40;
         }
         .stats {
             display: flex;
@@ -126,11 +128,11 @@
         .stat-number {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #059669;
+            color: #00d9ff;
         }
         .stat-label {
             font-size: 0.8rem;
-            color: #6b7280;
+            color: #a0a0b0;
         }
         .btn-group {
             display: flex;
@@ -148,45 +150,52 @@
             display: inline-block;
         }
         .btn-primary {
-            background: #059669;
-            color: white;
+            background: #00d9ff;
+            color: #0a0e27;
         }
         .btn-primary:hover {
-            background: #047857;
+            background: #00b8d9;
             transform: translateY(-2px);
         }
         .btn-outline {
-            border: 2px solid #059669;
-            color: #059669;
+            border: 2px solid #00d9ff;
+            color: #00d9ff;
             background: transparent;
         }
         .btn-outline:hover {
-            background: #059669;
-            color: white;
+            background: #00d9ff;
+            color: #0a0e27;
         }
         .profile-photo {
-            flex: 0 0 250px;
+            flex: 0 0 280px;
             text-align: center;
+            margin-top: 2rem;
         }
         .profile-photo img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
+            width: 260px;
+            height: auto;
+            border-radius: 30px;
             object-fit: cover;
-            border: 4px solid #059669;
-            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.2);
+            border: 3px solid #00d9ff;
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2);
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .profile-photo img:hover {
+            transform: scale(1.08);
         }
         .profile-photo-placeholder {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #059669, #10b981);
+            width: 260px;
+            height: 320px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #1e2a5e, #0f1235);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 5rem;
-            color: white;
+            color: #00d9ff;
             margin: 0 auto;
+            border: 2px solid #00d9ff;
         }
 
         /* Sections */
@@ -196,7 +205,7 @@
         .section-title {
             font-size: 1.8rem;
             margin-bottom: 2rem;
-            color: #1f2937;
+            color: #ffffff;
             position: relative;
         }
         .section-title:after {
@@ -204,7 +213,7 @@
             display: block;
             width: 50px;
             height: 3px;
-            background: #059669;
+            background: #00d9ff;
             margin-top: 0.5rem;
         }
 
@@ -215,18 +224,20 @@
             gap: 1.5rem;
         }
         .skill-card {
-            background: white;
+            background: #0f1235;
             border-radius: 12px;
             padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
             transition: all 0.3s;
+            border: 1px solid #1e2a5e;
         }
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border-color: #00d9ff;
         }
         .skill-card h3 {
-            color: #059669;
+            color: #00d9ff;
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
@@ -236,11 +247,11 @@
             gap: 0.5rem;
         }
         .skill-tag {
-            background: #f3f4f6;
+            background: #1e2a5e;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.75rem;
-            color: #374151;
+            color: #e0e0e0;
         }
 
         /* Projects Grid */
@@ -250,29 +261,32 @@
             gap: 1.5rem;
         }
         .project-card {
-            background: white;
+            background: #0f1235;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
             transition: all 0.3s;
+            border: 1px solid #1e2a5e;
         }
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border-color: #00d9ff;
         }
         .project-header {
-            background: #059669;
+            background: linear-gradient(135deg, #1e2a5e, #0f1235);
             padding: 1.5rem;
             text-align: center;
-            color: white;
+            color: #00d9ff;
             font-size: 2rem;
+            border-bottom: 1px solid #00d9ff40;
         }
         .project-content {
             padding: 1.5rem;
         }
         .project-content h3 {
             margin-bottom: 0.5rem;
-            color: #1f2937;
+            color: #ffffff;
         }
         .project-tech {
             display: flex;
@@ -281,11 +295,11 @@
             margin: 0.8rem 0;
         }
         .tech-tag {
-            background: #f3f4f6;
+            background: #1e2a5e;
             padding: 0.2rem 0.6rem;
             border-radius: 15px;
             font-size: 0.7rem;
-            color: #059669;
+            color: #00d9ff;
             font-weight: 600;
         }
         .project-features {
@@ -295,30 +309,30 @@
         .project-features li {
             font-size: 0.85rem;
             padding: 0.2rem 0;
-            color: #6b7280;
+            color: #b0b0c0;
         }
         .project-features li:before {
             content: '✓';
-            color: #059669;
+            color: #00d9ff;
             margin-right: 0.5rem;
             font-weight: bold;
         }
 
         /* Experience Cards */
         .exp-card {
-            background: white;
+            background: #0f1235;
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border-left: 4px solid #059669;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-left: 4px solid #00d9ff;
         }
         .exp-card h3 {
-            color: #1f2937;
+            color: #ffffff;
             margin-bottom: 0.3rem;
         }
         .exp-date {
-            color: #059669;
+            color: #00d9ff;
             font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 0.8rem;
@@ -331,16 +345,29 @@
             gap: 1rem;
         }
         .cert-card {
-            background: white;
+            background: #0f1235;
             border-radius: 12px;
             padding: 1rem;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border: 1px solid #1e2a5e;
+            transition: all 0.3s;
+        }
+        .cert-card:hover {
+            border-color: #00d9ff;
         }
         .cert-card i {
             font-size: 2rem;
-            color: #059669;
+            color: #00d9ff;
             margin-bottom: 0.5rem;
+        }
+        .cert-card h4 {
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+        .cert-card p {
+            font-size: 0.7rem;
+            color: #a0a0b0;
         }
 
         /* Contact Section */
@@ -350,10 +377,15 @@
             gap: 2rem;
         }
         .contact-form {
-            background: white;
+            background: #0f1235;
             padding: 1.5rem;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border: 1px solid #1e2a5e;
+        }
+        .contact-form h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
         }
         .form-group {
             margin-bottom: 1rem;
@@ -361,49 +393,60 @@
         .form-group input, .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid #e5e7eb;
+            background: #1a1e45;
+            border: 1px solid #1e2a5e;
             border-radius: 8px;
             font-family: inherit;
+            color: #ffffff;
         }
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
-            border-color: #059669;
+            border-color: #00d9ff;
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: #707090;
         }
         .submit-btn {
             width: 100%;
             padding: 0.8rem;
-            background: #059669;
-            color: white;
+            background: #00d9ff;
+            color: #0a0e27;
             border: none;
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
         }
         .submit-btn:hover {
-            background: #047857;
+            background: #00b8d9;
         }
         .contact-info p {
             margin: 0.8rem 0;
         }
         .contact-info i {
             width: 30px;
-            color: #059669;
+            color: #00d9ff;
         }
         .contact-info a {
-            color: #374151;
+            color: #e0e0e0;
             text-decoration: none;
         }
         .contact-info a:hover {
-            color: #059669;
+            color: #00d9ff;
+        }
+        .contact-info h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
         }
 
         /* Footer */
         footer {
-            background: #1f2937;
-            color: white;
+            background: #070a1f;
+            color: #a0a0b0;
             text-align: center;
             padding: 2rem 0;
             margin-top: 2rem;
+            border-top: 1px solid #1e2a5e;
         }
         .social-links {
             display: flex;
@@ -412,12 +455,12 @@
             margin-bottom: 1rem;
         }
         .social-links a {
-            color: white;
+            color: #a0a0b0;
             font-size: 1.3rem;
             transition: color 0.3s;
         }
         .social-links a:hover {
-            color: #059669;
+            color: #00d9ff;
         }
 
         /* Floating WhatsApp */
@@ -464,11 +507,11 @@
                 top: 60px;
                 left: 0;
                 width: 100%;
-                background: white;
+                background: #0f1235;
                 flex-direction: column;
                 padding: 1rem;
                 text-align: center;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.3);
             }
             .nav-links.active {
                 display: flex;
@@ -486,24 +529,19 @@
                 margin: 0.5rem auto;
             }
             .profile-photo img, .profile-photo-placeholder {
-                width: 180px;
-                height: 180px;
+                width: 200px;
             }
         }
 
         .form-success {
             display: none;
-            background: #d1fae5;
+            background: #00d9ff20;
             padding: 0.8rem;
             border-radius: 8px;
             margin-top: 1rem;
-            color: #059669;
+            color: #00d9ff;
             text-align: center;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            border: 1px solid #00d9ff;
         }
     </style>
 </head>
@@ -537,15 +575,16 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Felix Edu</h1>
-                        <div class="title">Software Developer & Automation Specialist</div>
+                        <h1>Felix Kipngetich</h1>
+                        <div class="title">Software Engineer | FinTech & Android Developer</div>
                         <div class="location-badges">
-                            <span class="badge"><i class="fas fa-map-marker-alt"></i> 10 Minutes from Bayer Ruaraka HQ</span>
+                            <span class="badge"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
                             <span class="badge badge-green"><i class="fas fa-clock"></i> Immediate Availability</span>
+                            <span class="badge"><i class="fas fa-globe"></i> Remote Worldwide</span>
                         </div>
                         <div class="stats">
                             <div class="stat">
-                                <div class="stat-number">3+</div>
+                                <div class="stat-number">4+</div>
                                 <div class="stat-label">Years Experience</div>
                             </div>
                             <div class="stat">
@@ -553,7 +592,7 @@
                                 <div class="stat-label">Projects Completed</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-number">95%</div>
+                                <div class="stat-number">100%</div>
                                 <div class="stat-label">Client Satisfaction</div>
                             </div>
                         </div>
@@ -564,7 +603,7 @@
                         </div>
                     </div>
                     <div class="profile-photo">
-                        <img src="profile-photo.png" alt="Felix Edu" id="profileImg" onerror="this.src='https://via.placeholder.com/250x250?text=Felix+Edu'">
+                        <img src="profile-photo.png" alt="Felix Kipngetich" id="profileImg" onerror="this.src='https://via.placeholder.com/260x320/1e2a5e/00d9ff?text=Felix+Kipngetich'">
                     </div>
                 </div>
             </div>
@@ -626,7 +665,6 @@
                         <div class="skill-tags">
                             <span class="skill-tag">English (Fluent)</span>
                             <span class="skill-tag">Swahili (Native)</span>
-                            <span class="skill-tag">Kalenjin (Native)</span>
                         </div>
                     </div>
                 </div>
@@ -809,7 +847,7 @@
                     <div class="contact-info">
                         <h3>Contact Information</h3>
                         <p><i class="fas fa-phone"></i> <a href="tel:0710276042">+254 710 276 042</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:kipngetichfelix@gmail.com">kipngetichfelix@gmail.com</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:kipngetichfelix281@gmail.com">kipngetichfelix281@gmail.com</a></p>
                         <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/felix-kipngetich/">linkedin.com/in/felix-kipngetich</a></p>
                         <p><i class="fab fa-github"></i> <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
                         <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254710276042">WhatsApp Me</a></p>
@@ -827,7 +865,7 @@
                 <a href="https://github.com/Edufel45"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/felix-kipngetich/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://wa.me/254710276042"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:kipngetichfelix@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:kipngetichfelix281@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
             <p>&copy; 2026 Felix Kipngetich. Software Engineer | FinTech | Android Development</p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem;">Available for remote opportunities worldwide</p>
