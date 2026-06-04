@@ -2,31 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Kipngetich | Software Engineer | FinTech & Android Developer</title>
     
-    <!-- SEO Meta Tags -->
-    <title>Felix Kipngetich | Senior Software Engineer | FinTech & Android Expert</title>
-    <meta name="description" content="Felix Kipngetich - Senior Software Engineer specializing in Android Development, FinTech, Banking Systems, and Payment Gateways. 4+ years experience, 15+ successful projects.">
-    <meta name="keywords" content="Felix Kipngetich, Software Engineer, Android Developer, FinTech, Kotlin, Go, Java, Python, Payment Systems, Banking, Blockchain, AI, Nairobi, Kenya">
-    <meta name="author" content="Felix Kipngetich">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Felix Kipngetich | Senior Software Engineer">
-    <meta property="og:description" content="Android Development | FinTech | Banking Systems | Payment Gateways | AI/ML">
-    <meta property="og:type" content="portfolio">
-    <meta property="og:url" content="https://Edufel45.github.io/my-portfolio">
-    <meta property="og:image" content="profile-photo.png">
-    
-    <!-- Preconnect for faster loading -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         * {
@@ -36,126 +16,23 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
             color: #1a1a2e;
             line-height: 1.6;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
         }
 
-        /* Theme Colors */
-        :root {
-            --primary: #059669;
-            --primary-dark: #047857;
-            --primary-light: #10b981;
-            --secondary: #0f172a;
-            --accent: #14b8a6;
-            --gray-light: #f3f4f6;
-            --gray: #6b7280;
-            --dark: #1e293b;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #e5e7eb;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 5px;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .animate-fadeUp {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        .animate-slideLeft {
-            animation: slideInLeft 0.8s ease forwards;
-        }
-        .animate-slideRight {
-            animation: slideInRight 0.8s ease forwards;
-        }
-        .float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        /* Typing effect */
-        .typing-text {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid var(--primary);
-            animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
-        }
-
-        /* Navigation */
+        /* Navigation Bar */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
+            background: white;
             padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .nav-container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -164,11 +41,8 @@
         }
         .logo {
             font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-weight: bold;
+            color: #059669;
         }
         .nav-links {
             display: flex;
@@ -176,211 +50,185 @@
             list-style: none;
         }
         .nav-links a {
-            color: var(--secondary);
             text-decoration: none;
+            color: #374151;
             font-weight: 500;
-            transition: all 0.3s;
-            position: relative;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s;
-        }
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
+            transition: color 0.3s;
         }
         .nav-links a:hover {
-            color: var(--primary);
+            color: #059669;
         }
         .mobile-menu {
             display: none;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: var(--primary);
+            color: #059669;
         }
 
+        /* Container */
         .container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23059669" fill-opacity="0.05" d="M0 0h200v200H0z"/><circle cx="100" cy="100" r="80" fill="none" stroke="%23059669" stroke-width="2"/></svg>') repeat;
-            opacity: 0.3;
-            pointer-events: none;
+            padding: 4rem 0;
+            background: white;
         }
         .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
             align-items: center;
-            position: relative;
-            z-index: 1;
+            justify-content: space-between;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1;
         }
         .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 2.5rem;
+            color: #1f2937;
             margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
         .hero-text .title {
-            font-size: 1.3rem;
-            color: var(--primary);
-            font-weight: 600;
+            font-size: 1.2rem;
+            color: #059669;
             margin-bottom: 0.5rem;
         }
-        .hero-text .dynamic-title {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            min-height: 3rem;
+        .location-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
         }
-        .profile-photo-container {
-            text-align: center;
+        .badge {
+            background: #f3f4f6;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: #4b5563;
         }
-        .profile-photo {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary);
-            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
-            transition: transform 0.3s;
-        }
-        .profile-photo:hover {
-            transform: scale(1.02);
+        .badge-green {
+            background: #d1fae5;
+            color: #059669;
         }
         .stats {
             display: flex;
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             flex-wrap: wrap;
         }
         .stat {
-            text-align: center;
-            background: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: left;
         }
         .stat-number {
             font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
+            font-weight: bold;
+            color: #059669;
         }
         .stat-label {
             font-size: 0.8rem;
-            color: var(--gray);
+            color: #6b7280;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
         .btn {
-            display: inline-block;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
-            transition: all 0.3s;
-            margin-right: 1rem;
-            margin-bottom: 0.5rem;
             font-weight: 600;
+            transition: all 0.3s;
             cursor: pointer;
             border: none;
+            display: inline-block;
         }
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: #059669;
             color: white;
-            background-size: 200% auto;
         }
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
-            background-position: right center;
+            background: #047857;
+            transform: translateY(-2px);
         }
         .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            border: 2px solid #059669;
+            color: #059669;
             background: transparent;
         }
         .btn-outline:hover {
-            background: var(--primary);
+            background: #059669;
             color: white;
-            transform: translateY(-3px);
         }
-        .btn-download {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        .profile-photo {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+        .profile-photo img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #059669;
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.2);
+        }
+        .profile-photo-placeholder {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #059669, #10b981);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
             color: white;
+            margin: 0 auto;
         }
 
+        /* Sections */
         section {
-            padding: 5rem 0;
-            position: relative;
+            padding: 4rem 0;
         }
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 1.8rem;
             margin-bottom: 2rem;
-            text-align: center;
-            color: var(--secondary);
+            color: #1f2937;
             position: relative;
         }
         .section-title:after {
             content: '';
             display: block;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            margin: 0.5rem auto;
-            border-radius: 2px;
+            width: 50px;
+            height: 3px;
+            background: #059669;
+            margin-top: 0.5rem;
         }
 
-        /* Skills Grid with icons */
+        /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         .skill-card {
             background: white;
-            border-radius: 20px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             transition: all 0.3s;
-            border: 1px solid #e5e7eb;
         }
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-color: var(--primary-light);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         .skill-card h3 {
-            color: var(--primary);
+            color: #059669;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         .skill-tags {
             display: flex;
@@ -388,188 +236,188 @@
             gap: 0.5rem;
         }
         .skill-tag {
-            background: var(--gray-light);
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: var(--secondary);
-            transition: all 0.3s;
-        }
-        .skill-tag:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
+            background: #f3f4f6;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #374151;
         }
 
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
         }
         .project-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             transition: all 0.3s;
-            border: 1px solid #e5e7eb;
         }
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        .project-icon {
-            background: linear-gradient(135deg, var(--primary-light), var(--primary));
-            padding: 2rem;
+        .project-header {
+            background: #059669;
+            padding: 1.5rem;
             text-align: center;
-            font-size: 3rem;
             color: white;
+            font-size: 2rem;
         }
         .project-content {
             padding: 1.5rem;
         }
         .project-content h3 {
-            color: var(--secondary);
             margin-bottom: 0.5rem;
+            color: #1f2937;
         }
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin: 1rem 0;
+            margin: 0.8rem 0;
         }
         .tech-tag {
-            background: var(--gray-light);
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
+            background: #f3f4f6;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
             font-size: 0.7rem;
+            color: #059669;
             font-weight: 600;
-            color: var(--primary);
         }
         .project-features {
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
         }
         .project-features li {
-            padding: 0.3rem 0;
-            font-size: 0.9rem;
-            color: var(--gray);
+            font-size: 0.85rem;
+            padding: 0.2rem 0;
+            color: #6b7280;
         }
         .project-features li:before {
-            content: '🚀';
+            content: '✓';
+            color: #059669;
             margin-right: 0.5rem;
+            font-weight: bold;
         }
 
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: var(--primary);
-        }
-        .timeline-item {
-            margin-bottom: 2rem;
-            position: relative;
-        }
-        .timeline-content {
+        /* Experience Cards */
+        .exp-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 12px;
             padding: 1.5rem;
-            width: calc(50% - 2rem);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid #059669;
         }
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
+        .exp-card h3 {
+            color: #1f2937;
+            margin-bottom: 0.3rem;
         }
-        .timeline-date {
-            color: var(--primary);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 0;
-            }
-            .timeline-content {
-                width: calc(100% - 2rem);
-                margin-left: 2rem !important;
-            }
+        .exp-date {
+            color: #059669;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
         }
 
         /* Certifications */
         .certs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
         .cert-card {
             background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
+            border-radius: 12px;
+            padding: 1rem;
             text-align: center;
-            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .cert-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+        .cert-card i {
+            font-size: 2rem;
+            color: #059669;
+            margin-bottom: 0.5rem;
         }
 
-        /* Contact Form */
+        /* Contact Section */
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2rem;
         }
         .contact-form {
             background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .form-group {
             margin-bottom: 1rem;
         }
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 1rem;
+            padding: 0.8rem;
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
+            border-radius: 8px;
             font-family: inherit;
-            transition: all 0.3s;
         }
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+            border-color: #059669;
         }
         .submit-btn {
             width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border: none;
-            border-radius: 12px;
+            padding: 0.8rem;
+            background: #059669;
             color: white;
+            border: none;
+            border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
         }
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(5, 150, 105, 0.3);
+            background: #047857;
+        }
+        .contact-info p {
+            margin: 0.8rem 0;
+        }
+        .contact-info i {
+            width: 30px;
+            color: #059669;
+        }
+        .contact-info a {
+            color: #374151;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            color: #059669;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #059669;
         }
 
         /* Floating WhatsApp */
@@ -578,116 +426,97 @@
             bottom: 20px;
             right: 20px;
             background: #25D366;
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: white;
             box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
             transition: all 0.3s;
             z-index: 999;
-            animation: pulse 2s infinite;
         }
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
 
-        /* Progress Bar */
-        .progress-container {
-            width: 100%;
-            background: var(--gray-light);
-            border-radius: 10px;
-            margin: 0.5rem 0;
-        }
-        .progress-bar {
-            height: 8px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            border-radius: 10px;
-            width: 0;
-            transition: width 1s ease;
-        }
-
-        footer {
-            background: var(--secondary);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s;
-        }
-        .social-links a:hover {
-            color: var(--primary-light);
-            transform: translateY(-3px);
-        }
-
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero-content {
-                grid-template-columns: 1fr;
+                flex-direction: column-reverse;
                 text-align: center;
                 gap: 2rem;
             }
-            .hero-text h1 {
-                font-size: 2rem;
+            .stats {
+                justify-content: center;
+            }
+            .stats .stat {
+                text-align: center;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
             }
             .mobile-menu {
                 display: block;
-            }
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
-                height: 100vh;
-                background: white;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: right 0.3s;
-                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-            }
-            .nav-links.active {
-                right: 0;
             }
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
             .section-title {
-                font-size: 2rem;
+                text-align: center;
             }
-            .profile-photo {
-                width: 200px;
-                height: 200px;
+            .section-title:after {
+                margin: 0.5rem auto;
             }
-            .stats {
-                justify-content: center;
+            .profile-photo img, .profile-photo-placeholder {
+                width: 180px;
+                height: 180px;
             }
+        }
+
+        .form-success {
+            display: none;
+            background: #d1fae5;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            color: #059669;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
 <body>
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/254710276042?text=Hi%20Felix,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" 
-       class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/254710276042?text=Hi%20Felix,%20I%20saw%20your%20portfolio!" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo float">Felix Kipngetich</div>
+            <div class="logo">FelixEdu</div>
             <div class="mobile-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -696,7 +525,7 @@
                 <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+                <li><a href="#certifications" onclick="toggleMenu()">Education</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
@@ -707,27 +536,35 @@
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-text" data-aos="fade-right">
-                        <h1>Felix Kipngetich</h1>
-                        <div class="title">Senior Software Engineer</div>
-                        <div class="dynamic-title">
-                            <span class="typing-text" id="typingText"></span>
+                    <div class="hero-text">
+                        <h1>Felix Edu</h1>
+                        <div class="title">Software Developer & Automation Specialist</div>
+                        <div class="location-badges">
+                            <span class="badge"><i class="fas fa-map-marker-alt"></i> 10 Minutes from Bayer Ruaraka HQ</span>
+                            <span class="badge badge-green"><i class="fas fa-clock"></i> Immediate Availability</span>
                         </div>
                         <div class="stats">
-                            <div class="stat"><div class="stat-number">4+</div><div class="stat-label">Years Exp</div></div>
-                            <div class="stat"><div class="stat-number">18+</div><div class="stat-label">Projects</div></div>
-                            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Delivery Rate</div></div>
-                            <div class="stat"><div class="stat-number">7+</div><div class="stat-label">Technologies</div></div>
+                            <div class="stat">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">18+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
                         </div>
-                        <div>
-                            <a href="#contact" class="btn btn-primary">Hire Me</a>
-                            <a href="#projects" class="btn btn-outline">View Work</a>
-                            <a href="#" id="downloadCvBtn" class="btn btn-download"><i class="fas fa-download"></i> Download CV</a>
+                        <div class="btn-group">
+                            <a href="#contact" class="btn btn-primary">Contact Me</a>
+                            <a href="#projects" class="btn btn-outline">View My Work</a>
+                            <a href="#" id="downloadCvBtn" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                     </div>
-                    <div class="profile-photo-container" data-aos="fade-left" data-aos-delay="200">
-                        <img src="profile-photo.png" alt="Felix Kipngetich" class="profile-photo float" id="profileImg" onerror="this.src='https://via.placeholder.com/320x320?text=Felix+Kipngetich'">
-                        <p style="margin-top: 0.5rem; color: var(--gray); font-size: 0.8rem;">Software Engineer & FinTech Expert</p>
+                    <div class="profile-photo">
+                        <img src="profile-photo.png" alt="Felix Edu" id="profileImg" onerror="this.src='https://via.placeholder.com/250x250?text=Felix+Edu'">
                     </div>
                 </div>
             </div>
@@ -736,198 +573,170 @@
         <!-- Skills Section -->
         <section id="skills">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Technical Arsenal</h2>
+                <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="skill-card">
                         <h3><i class="fab fa-android"></i> Mobile Development</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Android (Java/Kotlin)</span>
                             <span class="skill-tag">Flutter & Dart</span>
-                            <span class="skill-tag">Swift UI</span>
                             <span class="skill-tag">React Native</span>
-                            <span class="skill-tag">KMM</span>
+                            <span class="skill-tag">Swift UI</span>
                         </div>
                     </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card">
                         <h3><i class="fas fa-coins"></i> Backend & FinTech</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Go (Golang)</span>
                             <span class="skill-tag">Spring Boot</span>
                             <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Django</span>
-                            <span class="skill-tag">ASP.NET Core</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">PHP (Laravel)</span>
+                            <span class="skill-tag">Python/Django</span>
+                            <span class="skill-tag">PHP/Laravel</span>
                         </div>
                     </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
                         <h3><i class="fas fa-database"></i> Databases & Cloud</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">Redis</span>
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">Docker/K8s</span>
+                            <span class="skill-tag">MySQL/PostgreSQL</span>
+                            <span class="skill-tag">MongoDB/Firebase</span>
+                            <span class="skill-tag">AWS/Azure</span>
+                            <span class="skill-tag">Docker/Kubernetes</span>
                         </div>
                     </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
                         <h3><i class="fas fa-plug"></i> Integrations & APIs</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">REST APIs</span>
-                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">REST/GraphQL</span>
                             <span class="skill-tag">SOAP Services</span>
-                            <span class="skill-tag">gRPC</span>
-                            <span class="skill-tag">WebSockets</span>
                             <span class="skill-tag">M-PESA API</span>
                             <span class="skill-tag">Stripe/PesaPal</span>
                         </div>
                     </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card">
                         <h3><i class="fas fa-brain"></i> AI & Emerging Tech</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Machine Learning</span>
                             <span class="skill-tag">Blockchain</span>
                             <span class="skill-tag">Smart Contracts</span>
-                            <span class="skill-tag">Computer Vision</span>
-                            <span class="skill-tag">NLP</span>
                             <span class="skill-tag">LLM Integration</span>
                         </div>
                     </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                        <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-language"></i> Languages</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Git/GitHub</span>
-                            <span class="skill-tag">Jenkins</span>
-                            <span class="skill-tag">Terraform</span>
-                            <span class="skill-tag">Prometheus</span>
-                            <span class="skill-tag">Grafana</span>
-                            <span class="skill-tag">Linux/Unix</span>
-                            <span class="skill-tag">Bash Scripting</span>
+                            <span class="skill-tag">English (Fluent)</span>
+                            <span class="skill-tag">Swahili (Native)</span>
+                            <span class="skill-tag">Kalenjin (Native)</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section - Heavy Complex Projects -->
+        <!-- Projects Section -->
         <section id="projects">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-                        <div class="project-icon"><i class="fas fa-university"></i></div>
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-university"></i></div>
                         <div class="project-content">
                             <h3>Central Bank Digital Currency (CBDC) Platform</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">Go</span>
-                                <span class="tech-tag">Hyperledger Fabric</span>
-                                <span class="tech-tag">gRPC</span>
+                                <span class="tech-tag">Hyperledger</span>
                                 <span class="tech-tag">Kubernetes</span>
                             </div>
                             <ul class="project-features">
-                                <li>Scalable digital currency issuance system for central banks</li>
-                                <li>Real-time transaction settlement with blockchain audit trail</li>
-                                <li>Offline payment capability using NFC and Bluetooth</li>
-                                <li>Anti-money laundering (AML) monitoring with AI</li>
-                                <li>Interoperability with M-PESA and traditional banking</li>
+                                <li>Scalable digital currency issuance system</li>
+                                <li>Real-time settlement with blockchain audit</li>
+                                <li>Offline payments via NFC/Bluetooth</li>
+                                <li>AML monitoring with AI</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-exchange-alt"></i></div>
                         <div class="project-content">
-                            <h3>AI-Powered Credit Scoring Engine</h3>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">React</span>
-                            </div>
-                            <ul class="project-features">
-                                <li>Alternative credit scoring using mobile money transaction data</li>
-                                <li>Real-time loan approval in under 30 seconds</li>
-                                <li>99.7% fraud detection accuracy using ensemble learning</li>
-                                <li>Integration with 5+ major banks in East Africa</li>
-                                <li>Automated KYC verification using computer vision</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-icon"><i class="fas fa-exchange-alt"></i></div>
-                        <div class="project-content">
-                            <h3>Cross-Border Payment Gateway (PesaFlow)</h3>
+                            <h3>PesaFlow - Cross-Border Payment Gateway</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">Go</span>
                                 <span class="tech-tag">Kafka</span>
                                 <span class="tech-tag">Redis</span>
-                                <span class="tech-tag">Vue.js</span>
                             </div>
                             <ul class="project-features">
-                                <li>Instant settlement between 15+ African countries</li>
-                                <li>Dynamic FX rates with 0.5% spread (lowest in market)</li>
-                                <li>Blockchain-based settlement for transparency</li>
-                                <li>Processed $50M+ in transaction volume (2025)</li>
-                                <li>Compliance with 12 central banks' regulations</li>
+                                <li>Instant settlement across 15+ African countries</li>
+                                <li>Dynamic FX rates with 0.5% spread</li>
+                                <li>Processed $50M+ transaction volume (2025)</li>
+                                <li>Blockchain-based settlement</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-chart-line"></i></div>
                         <div class="project-content">
                             <h3>Mzazi Financial SuperApp</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">Kotlin</span>
                                 <span class="tech-tag">Spring Boot</span>
                                 <span class="tech-tag">Groq AI</span>
-                                <span class="tech-tag">PostgreSQL</span>
                             </div>
                             <ul class="project-features">
                                 <li>200,000+ active users across Kenya</li>
-                                <li>AI financial advisor with Llama 3.3 integration</li>
-                                <li>Investment portfolio management (stocks, bonds, crypto)</li>
-                                <li>Chama (investment group) management with smart contracts</li>
-                                <li>Bill payments, savings goals, and pension planning</li>
+                                <li>AI financial advisor (Llama 3.3)</li>
+                                <li>Investment portfolio management</li>
+                                <li>Chama management with smart contracts</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-building"></i></div>
                         <div class="project-content">
-                            <h3>Enterprise Approval System (Dynamics 365)</h3>
+                            <h3>Enterprise Approval System</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">AL Language</span>
                                 <span class="tech-tag">Azure</span>
                                 <span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">Logic Apps</span>
                             </div>
                             <ul class="project-features">
                                 <li>Multi-level approvals with AI prediction (95% accuracy)</li>
-                                <li>Blockchain audit trail with SHA-256 verification</li>
-                                <li>Smart contract automation for procurement</li>
+                                <li>Blockchain audit trail (SHA-256)</li>
+                                <li>Smart contract automation</li>
                                 <li>Real-time dashboard with 50+ KPIs</li>
-                                <li>Deployed at 3+ enterprise clients in Kenya</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="project-icon"><i class="fas fa-gas-pump"></i></div>
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-robot"></i></div>
                         <div class="project-content">
-                            <h3>E-Gas Logistics & Delivery Platform</h3>
+                            <h3>AI-Powered Credit Scoring Engine</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Alternative credit scoring using mobile money data</li>
+                                <li>Real-time loan approval under 30 seconds</li>
+                                <li>99.7% fraud detection accuracy</li>
+                                <li>Integration with 5+ major banks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-gas-pump"></i></div>
+                        <div class="project-content">
+                            <h3>E-Gas Delivery Platform</h3>
                             <div class="project-tech">
                                 <span class="tech-tag">Java</span>
                                 <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Google Maps API</span>
-                                <span class="tech-tag">Twilio</span>
+                                <span class="tech-tag">Google Maps</span>
                             </div>
                             <ul class="project-features">
-                                <li>Real-time LPG delivery tracking with ETAs (5-min accuracy)</li>
-                                <li>Optimized routing reducing delivery time by 35%</li>
-                                <li>50,000+ deliveries completed across Nairobi</li>
-                                <li>Automated vendor payout system</li>
-                                <li>Customer rating and review system</li>
+                                <li>50,000+ deliveries completed</li>
+                                <li>Real-time tracking with 5-min ETA accuracy</li>
+                                <li>Optimized routing (35% time reduction)</li>
+                                <li>M-PESA payment integration</li>
                             </ul>
                         </div>
                     </div>
@@ -935,111 +744,77 @@
             </div>
         </section>
 
-        <!-- Experience Timeline -->
+        <!-- Experience Section -->
         <section id="experience">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Professional Journey</h2>
-                <div class="timeline">
-                    <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2024 - Present</div>
-                            <h3>Senior Software Engineer (Remote)</h3>
-                            <h4>FinTech Innovations Inc. - Remote (US/EU)</h4>
-                            <p>Leading development of cross-border payment systems serving 15+ African countries. Architecting microservices in Go and Kotlin, handling $100M+ annual transaction volume.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-aos="fade-left">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025 - 2026</div>
-                            <h3>Software Engineer (Remote)</h3>
-                            <h4>E-Gas Company - Nairobi, Kenya</h4>
-                            <p>Built Android mobile app for LPG delivery with 50,000+ completed deliveries. Integrated M-PESA payments and real-time tracking system.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2022 - 2024</div>
-                            <h3>IT Specialist</h3>
-                            <h4>University of Nairobi</h4>
-                            <p>Configured enterprise software, managed user accounts (500+), and provided technical support. Facilitated 20+ training sessions on IT systems.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-aos="fade-left">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2021 - Present</div>
-                            <h3>Freelance Consultant (Remote)</h3>
-                            <h4>Various International Clients</h4>
-                            <p>Delivered 15+ projects for clients in US, UK, UAE, and Kenya. Specialized in FinTech integrations, mobile apps, and enterprise automation.</p>
-                        </div>
-                    </div>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="exp-card">
+                    <h3>Senior Software Engineer (Remote)</h3>
+                    <div class="exp-date">2024 - Present | FinTech Innovations Inc. (US/EU)</div>
+                    <p>Leading development of cross-border payment systems serving 15+ African countries. Architecting microservices in Go and Kotlin, handling $100M+ annual transaction volume.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Software Engineer (Remote)</h3>
+                    <div class="exp-date">2025 - 2026 | E-Gas Company, Nairobi</div>
+                    <p>Built Android mobile app for LPG delivery with 50,000+ completed deliveries. Integrated M-PESA payments and real-time tracking system.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>IT Specialist</h3>
+                    <div class="exp-date">2022 - 2024 | University of Nairobi</div>
+                    <p>Configured enterprise software, managed user accounts (500+), and provided technical support. Facilitated 20+ training sessions on IT systems.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Freelance Consultant (Remote)</h3>
+                    <div class="exp-date">2021 - Present | Various International Clients</div>
+                    <p>Delivered 15+ projects for clients in US, UK, UAE, and Kenya. Specialized in FinTech integrations, mobile apps, and enterprise automation.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications -->
+        <!-- Certifications Section -->
         <section id="certifications">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Certifications & Achievements</h2>
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="exp-card">
+                    <h3>Bachelor of Science in Information Technology</h3>
+                    <div class="exp-date">2021 - 2025 | KCA University, Nairobi</div>
+                    <p>Relevant Coursework: Database Management, Software Engineering, Business Information Systems, Network Administration, Web Development</p>
+                </div>
                 <div class="certs-grid">
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="0">
-                        <div class="cert-icon"><i class="fab fa-google"></i></div>
-                        <h4>Google Professional Cloud Architect</h4>
-                        <p>Google Cloud - 2025</p>
-                    </div>
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-                        <h4>Microsoft Certified: Azure Solutions Architect Expert</h4>
-                        <p>Microsoft - 2024</p>
-                    </div>
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="cert-icon"><i class="fab fa-java"></i></div>
-                        <h4>Oracle Certified Professional (Java SE 17)</h4>
-                        <p>Oracle - 2024</p>
-                    </div>
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-                        <h4>FinTech Certification</h4>
-                        <p>MIT Sloan - 2025</p>
-                    </div>
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h4>Certified Blockchain Developer</h4>
-                        <p>Blockchain Council - 2024</p>
-                    </div>
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
-                        <h4>AI for Everyone</h4>
-                        <p>DeepLearning.ai - 2024</p>
-                    </div>
+                    <div class="cert-card"><i class="fab fa-google"></i><h4>Google Cloud Architect</h4><p>2025</p></div>
+                    <div class="cert-card"><i class="fab fa-microsoft"></i><h4>Azure Solutions Expert</h4><p>2024</p></div>
+                    <div class="cert-card"><i class="fab fa-java"></i><h4>Oracle Java SE 17</h4><p>2024</p></div>
+                    <div class="cert-card"><i class="fas fa-chart-line"></i><h4>MIT FinTech</h4><p>2025</p></div>
+                    <div class="cert-card"><i class="fas fa-shield-alt"></i><h4>Blockchain Developer</h4><p>2024</p></div>
+                    <div class="cert-card"><i class="fas fa-robot"></i><h4>AI for Everyone</h4><p>2024</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
+        <!-- Contact Section -->
         <section id="contact">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Let's Build Something Great</h2>
+                <h2 class="section-title">Get In Touch</h2>
                 <div class="contact-wrapper">
-                    <div class="contact-form" data-aos="fade-right">
+                    <div class="contact-form">
                         <h3>Send me a message</h3>
                         <form id="contactForm">
                             <div class="form-group"><input type="text" id="name" placeholder="Your Name" required></div>
                             <div class="form-group"><input type="email" id="email" placeholder="Your Email" required></div>
-                            <div class="form-group"><textarea id="message" placeholder="Tell me about your project..." required></textarea></div>
+                            <div class="form-group"><textarea id="message" placeholder="Your Message" rows="4" required></textarea></div>
                             <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
                             <div class="form-success" id="formSuccess">✓ Message sent! I'll reply within 24 hours.</div>
                         </form>
                     </div>
-                    <div data-aos="fade-left">
+                    <div class="contact-info">
                         <h3>Contact Information</h3>
-                        <div style="margin-top: 1rem;">
-                            <p style="margin: 1rem 0;"><i class="fas fa-phone" style="color: var(--primary); width: 30px;"></i> <a href="tel:0710276042">+254 710 276 042</a></p>
-                            <p style="margin: 1rem 0;"><i class="fas fa-envelope" style="color: var(--primary); width: 30px;"></i> kipngetichfelix@gmail.com</p>
-                            <p style="margin: 1rem 0;"><i class="fab fa-linkedin" style="color: var(--primary); width: 30px;"></i> <a href="https://www.linkedin.com/in/felix-kipngetich/">linkedin.com/in/felix-kipngetich</a></p>
-                            <p style="margin: 1rem 0;"><i class="fab fa-github" style="color: var(--primary); width: 30px;"></i> <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
-                            <p style="margin: 1rem 0;"><i class="fab fa-whatsapp" style="color: var(--primary); width: 30px;"></i> <a href="https://wa.me/254710276042">WhatsApp Me</a></p>
-                            <p style="margin: 1rem 0;"><i class="fas fa-map-marker-alt" style="color: var(--primary); width: 30px;"></i> Nairobi, Kenya (Available for Remote/Hybrid)</p>
-                        </div>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0710276042">+254 710 276 042</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:kipngetichfelix@gmail.com">kipngetichfelix@gmail.com</a></p>
+                        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/felix-kipngetich/">linkedin.com/in/felix-kipngetich</a></p>
+                        <p><i class="fab fa-github"></i> <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254710276042">WhatsApp Me</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya (Remote/Hybrid)</p>
+                        <p><i class="fas fa-clock"></i> Immediate Availability</p>
                     </div>
                 </div>
             </div>
@@ -1053,72 +828,24 @@
                 <a href="https://www.linkedin.com/in/felix-kipngetich/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://wa.me/254710276042"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:kipngetichfelix@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            <p>&copy; 2026 Felix Kipngetich. Senior Software Engineer | FinTech | Android Expert</p>
+            <p>&copy; 2026 Felix Kipngetich. Software Engineer | FinTech | Android Development</p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem;">Available for remote opportunities worldwide</p>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-
         // Mobile menu toggle
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Typing animation for dynamic titles
-        const titles = [
-            "🚀 Android & FinTech Expert",
-            "💳 Payment Systems Architect",
-            "🤖 AI Integration Specialist",
-            "🌍 Remote Software Engineer",
-            "💼 18+ Projects Completed",
-            "🔗 Blockchain Developer"
-        ];
-        let titleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById('typingText');
-
-        function typeEffect() {
-            const currentTitle = titles[titleIndex];
-            if (isDeleting) {
-                typingElement.textContent = currentTitle.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentTitle.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentTitle.length) {
-                isDeleting = true;
-                setTimeout(typeEffect, 2000);
-                return;
-            }
-            if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                titleIndex = (titleIndex + 1) % titles.length;
-                setTimeout(typeEffect, 500);
-                return;
-            }
-            setTimeout(typeEffect, isDeleting ? 50 : 100);
-        }
-        typeEffect();
-
-        // Contact form
+        // Contact form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = document.querySelector('.submit-btn');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<span class="loading-spinner"></span> Sending...';
+            btn.innerHTML = 'Sending...';
             btn.disabled = true;
             
             setTimeout(() => {
@@ -1133,8 +860,9 @@
         });
 
         // Download CV button
-        document.getElementById('downloadCvBtn').addEventListener('click', function() {
-            alert('📄 CV Download: For now, you can save this webpage as PDF:\nCtrl+P → Save as PDF\n\nFull CV with detailed experience available upon request.');
+        document.getElementById('downloadCvBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('📄 CV Download: You can save this webpage as PDF:\nCtrl+P → Save as PDF\n\nFull CV with detailed experience available upon request.');
         });
 
         // Smooth scroll and active nav highlighting
@@ -1146,7 +874,7 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
+                if (scrollY >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1158,20 +886,18 @@
             });
         });
 
-        // Progress bars animation when visible
-        const observerOptions = { threshold: 0.5 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bars = entry.target.querySelectorAll('.progress-bar');
-                    bars.forEach(bar => {
-                        const width = bar.getAttribute('data-width');
-                        bar.style.width = width;
-                    });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
             });
-        }, observerOptions);
-        document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
+        });
     </script>
 </body>
 </html>
