@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Edu | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #3498db;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+        }
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skill-category h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .skill-category li {
+            background: #ecf0f1;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .project {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        .project h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .demo-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .demo-link:hover {
+            background: #2980b9;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .badge-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Felix Edu</h1>
+            <p>Software Developer | Automation Specialist | IT Support Professional</p>
+            <div class="badge-container">
+                <span class="badge">3+ Years Experience</span>
+                <span class="badge">12+ Projects</span>
+                <span class="badge">95% Client Satisfaction</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>📋 Professional Summary</h2>
+            <p>Experienced in data entry and software development. Passionate about leveraging technology to solve real business problems. Built complete automation systems for enterprise clients, demonstrating strong analytical and problem-solving skills. Seeking to bring technical expertise and customer-centric approach to Bayer Kenya's Digital Support team.</p>
+        </section>
+
+        <section>
+            <h2>💻 Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Hardware & Software</h3>
+                    <ul>
+                        <li>PC Assembly & Troubleshooting</li>
+                        <li>Windows OS (all versions)</li>
+                        <li>Network Setup & Configuration</li>
+                        <li>Printer Support</li>
+                        <li>Data Recovery</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Node.js / Express</li>
+                        <li>React.js</li>
+                        <li>SQLite / PostgreSQL</li>
+                        <li>HTML5 / CSS3 / JavaScript</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English (Fluent)</li>
+                        <li>Swahili (Native)</li>
+                        <li>Kalenjin (Native)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🚀 Featured Project: Bayer Seminis Automation Suite</h2>
+            <div class="project">
+                <p><strong>Built a production-ready automation system matching Bayer Kenya's Digital Support Intern role requirements:</strong></p>
+                <ul style="margin: 15px 0 15px 25px;">
+                    <li><strong>Procurement Automation:</strong> Auto-creates purchase orders when stock hits minimum levels</li>
+                    <li><strong>Authentication Codes:</strong> Self-service promotion code generation with real-time tracking</li>
+                    <li><strong>Digital Community Management:</strong> WhatsApp/Facebook/Instagram auto-responder with AI intent detection</li>
+                    <li><strong>Reporting Dashboard:</strong> Real-time analytics, PDF/Excel export, vendor scorecards</li>
+                </ul>
+                <a href="#" class="demo-link">🔗 Live Demo Available</a>
+                <a href="https://github.com/Edufel45" class="demo-link" style="margin-left: 10px;">📂 GitHub Profile</a>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Built with: Node.js, Express, SQLite</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>📁 Other Projects</h2>
+            <div class="project">
+                <h3>Enterprise CRM System</h3>
+                <p>Full-stack CRM using React, Node.js, and PostgreSQL. Features include lead tracking, customer segmentation, and automated follow-up emails.</p>
+            </div>
+            <div class="project">
+                <h3>AI Enterprise Approval System</h3>
+                <p>Complete approval workflow system for Dynamics 365 Business Central with AI prediction, blockchain audit, and smart contracts.</p>
+            </div>
+            <div class="project">
+                <h3>Inventory Forecasting System</h3>
+                <p>AI-powered demand prediction and auto-reorder engine using historical sales data and seasonal trend analysis.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎓 Education & Certifications</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>BSc Information Technology</strong><br>KCA University, Nairobi (2021-2025)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Microsoft Office Specialist (MOS)</li>
+                        <li>IT Support Professional - Google</li>
+                        <li>Customer Service Excellence</li>
+                        <li>Data Entry Certification</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <h2>📞 Contact</h2>
+            <p>📱 0710 276 042</p>
+            <p>📍 10 Minutes from Bayer Ruaraka HQ</p>
+            <p>⚡ Immediate Availability</p>
+            <p>📧 GitHub: <a href="https://github.com/Edufel45">github.com/Edufel45</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Felix Edu. Built with HTML/CSS | Hosted on GitHub Pages</p>
+    </footer>
+</body>
+</html>
